@@ -1,0 +1,6 @@
+version: '3'
+services:
+  flipkart-scraper-api:
+    image: localhost/flipkart-scraper-api
+    ports:
+      - "3000:3000"
