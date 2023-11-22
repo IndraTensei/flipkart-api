@@ -2,7 +2,6 @@ build:
   api:
     context: .
     dockerfile: Dockerfile
-    target: dev
 
 deploy:
   - docker build . --tag flipkart-scraper-api
