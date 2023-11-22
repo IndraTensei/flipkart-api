@@ -5,7 +5,9 @@ securityContext:
   capabilities:
     add:
       - NET_BIND_SERVICE
+containers:
+  - image: flipkart-scraper-api
+    ports:
+      - 3000:3000
 volumes:
   - /app/node_modules
-ports:
-  - 3000:3000
