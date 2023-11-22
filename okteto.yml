@@ -4,5 +4,14 @@ build:
     dockerfile: Dockerfile
 
 deploy:
-  - docker build . --tag flipkart-scraper-api
-  - docker run -p 3000:3000 flipkart-scraper-api
+  - okteto build
+  - okteto up
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: ["flipkart-scraper-api"]
+    ports:
+      - 3000:3000
